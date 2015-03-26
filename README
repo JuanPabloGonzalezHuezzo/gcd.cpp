@@ -1,0 +1,28 @@
+# gcd.cpp
+#include <iostream>
+using namespace std;
+
+ int gcd (int x, int y){
+
+   if (x==y){
+    return x;
+    }
+  else if(x>y){
+    return gcd(x-y,y);
+    }
+  else {
+    return gcd(x,y-x);
+    }
+ }
+
+int main (){
+  int a,b;
+  cout << "Which numbers do you want to know the GCD from (insert first)? " << endl;
+  cin >> a;
+  cout << "Insert the second number: " << endl;
+  cin >> b;
+
+  cout << "el máximo común divisor de "<< a << " y "<< b << " es igual a: "<< gcd(a,b) << endl;
+
+  return 0;
+}
